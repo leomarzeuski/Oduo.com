@@ -32,6 +32,7 @@ export default function ContactForm() {
       reset();
       setCaptchaVerified(false);
     } catch (e) {
+      console.log(e)
       alert("Erro ao tentar enviar formulário, tente novamente!");
     }
   };
