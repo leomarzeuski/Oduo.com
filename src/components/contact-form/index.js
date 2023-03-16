@@ -33,7 +33,7 @@ export default function ContactForm() {
       setCaptchaVerified(false);
     } catch (e) {
       console.log(e)
-      alert("Erro ao tentar enviar formulário, tente novamente!");
+      //alert("Erro ao tentar enviar formulário, tente novamente!");
     }
   };
   return (
