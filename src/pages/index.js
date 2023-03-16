@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
+import Script from "next/script";
 
 import {
   ButtonWhatsapp,
@@ -43,6 +44,16 @@ export default function Home() {
           vez mais, usando o poder da internet!"
           key="ogdesc"
         />
+        <meta
+          property="og:site_name"
+          content="ODuo Assessoria"
+          key="ogsitename"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <title>ODuo Assessoria</title>
+      </Head>
+      <main className="relative overflow-hidden">
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-3CYGGC48KL"
@@ -56,16 +67,6 @@ export default function Home() {
           gtag('config', 'G-3CYGGC48KL');
           `}
         </Script>
-        <meta
-          property="og:site_name"
-          content="ODuo Assessoria"
-          key="ogsitename"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <title>ODuo Assessoria</title>
-      </Head>
-      <main className="relative overflow-hidden">
         <Header />
         <SectionHero />
         <SectionWhy />
