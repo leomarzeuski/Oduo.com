@@ -8,6 +8,7 @@ import { sendMail } from "@/services/email";
 import validation from "./validation";
 
 const SITE_KEY = process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY;
+console.log(SITE_KEY)
 
 export default function ContactForm() {
   const [captchaVerified, setCaptchaVerified] = useState(null);
