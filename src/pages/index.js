@@ -24,7 +24,10 @@ export default function Home() {
   return (
     <>
       <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        />
         <meta charSet="utf-8" />
         <meta name="title" content="ODuo Assessoria" />
         <meta
@@ -40,6 +43,19 @@ export default function Home() {
           vez mais, usando o poder da internet!"
           key="ogdesc"
         />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-3CYGGC48KL"
+        ></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || []; 
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+          
+          gtag('config', 'G-3CYGGC48KL');
+          `}
+        </Script>
         <meta
           property="og:site_name"
           content="ODuo Assessoria"
