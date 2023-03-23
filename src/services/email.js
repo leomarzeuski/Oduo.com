@@ -6,8 +6,9 @@ const userId = process.env.NEXT_PUBLIC_USER_ID;
 
 export async function sendMail(formData) {
   try {
-    await emailjs.send(serviceId, templateId, formData, userId);
+    await emailjs.send(serviceId, templateId, formData, "eRuxeMEPGMlcok7aw");
   } catch (err) {
+    console.log(err)
     throw Error(err);
   }
 }
