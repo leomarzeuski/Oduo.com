@@ -1,6 +1,5 @@
 export { default as Header } from "./header";
 export { default as Button } from "./button";
-export { default as ButtonWhatsapp } from "./button-whatsapp";
 export { default as ContactForm } from "./contact-form";
 export { default as Footer } from "./footer";
 export { default as Input } from "./input";

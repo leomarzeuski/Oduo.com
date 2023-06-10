@@ -9,6 +9,21 @@ import validation from "./validation";
 
 const SITE_KEY = process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY;
 
+const gtagReportConversion = (url) => {
+  const callback = () => {
+    if (typeof url !== "undefined") {
+      window.location = url;
+    }
+  };
+
+  gtag("event", "conversion", {
+    send_to: "AW-11084845242/-1AYCN-ZyKgYELqh1aUp",
+    event_callback: callback,
+  });
+
+  return false;
+};
+
 export default function ContactForm() {
   const [captchaVerified, setCaptchaVerified] = useState(null);
 
@@ -26,13 +41,14 @@ export default function ContactForm() {
       alert("Você deve validar o captcha!");
       return;
     }
+    gtagReportConversion("/");
     try {
       await sendMail(formData);
       alert("Formulário enviado com sucesso!");
       reset();
       setCaptchaVerified(false);
     } catch (e) {
-      console.log(e)
+      console.log(e);
       alert("Erro ao tentar enviar formulário, tente novamente!");
     }
   };

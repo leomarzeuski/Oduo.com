@@ -34,12 +34,13 @@ export default function Clients() {
             },
           }}
         >
-          {Array.from({ length: 10 }).map((_, idx) => (
+          {Array.from({ length: 11 }).map((_, idx) => (
             <SwiperSlide
               key={idx}
               className="w-full h-[140px] lg:h-[180px] flex items-center justify-center bg-white rounded-md"
             >
               <Image
+                className="h-[80px] object-contain"
                 src={`/assets/img/cliente_logo_${idx + 1}.png`}
                 width={180}
                 height={100}

@@ -3,7 +3,6 @@ import Head from "next/head";
 import Script from "next/script";
 
 import {
-  ButtonWhatsapp,
   Footer,
   Header,
   ModalContact,
@@ -63,7 +62,7 @@ export default function Home() {
           window.dataLayer = window.dataLayer || []; 
           function gtag(){dataLayer.push(arguments)}
           gtag('js', new Date());
-          
+           
           gtag('config', 'G-3CYGGC48KL');
           `}
         </Script>
@@ -78,7 +77,6 @@ export default function Home() {
         <SectionContact />
         <Footer />
         <ModalContact showModal={showModal} toggleModal={toggleModal} />
-        <ButtonWhatsapp />
       </main>
     </>
   );
