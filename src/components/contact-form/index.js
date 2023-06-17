@@ -9,17 +9,14 @@ import validation from "./validation";
 
 const SITE_KEY = process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY;
 
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-11084845242/-1AYCN-ZyKgYELqh1aUp',
-      'event_callback': callback
-  });
-  return false;
+function gtag_report_conversion() {
+  try {
+    gtag("event", "conversion", {
+      send_to: "AW-11084845242/-1AYCN-ZyKgYELqh1aUp",
+    });
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 export default function ContactForm() {
@@ -39,7 +36,7 @@ export default function ContactForm() {
       alert("Você deve validar o captcha!");
       return;
     }
-    gtag_report_conversion(window.location.origin);
+    gtag_report_conversion();
     try {
       await sendMail(formData);
       alert("Formulário enviado com sucesso!");
