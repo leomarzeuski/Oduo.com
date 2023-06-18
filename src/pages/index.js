@@ -49,7 +49,7 @@ export default function Home() {
           key="ogsitename"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="/favicon-oduo.png" />
         <title>ODuo Assessoria</title>
       </Head>
       <main className="relative overflow-hidden">
