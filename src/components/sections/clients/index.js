@@ -34,7 +34,7 @@ export default function Clients() {
             },
           }}
         >
-          {Array.from({ length: 11 }).map((_, idx) => (
+          {Array.from({ length: 12 }).map((_, idx) => (
             <SwiperSlide
               key={idx}
               className="w-full h-[140px] lg:h-[180px] flex items-center justify-center bg-white rounded-md"
