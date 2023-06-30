@@ -18,6 +18,8 @@ export default function Document() {
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="icon" type="image/png" href="/favicon-oduo.png" />
+
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"

@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, Input, Select } from "@/components";
 import { sendMail } from "@/services/email";
 import validation from "./validation";
+import router from "next/router";
 
 const SITE_KEY = process.env.NEXT_PUBLIC_CAPTCHA_SITEKEY;
 
@@ -39,7 +40,7 @@ export default function ContactForm() {
     gtag_report_conversion();
     try {
       await sendMail(formData);
-      alert("Formulário enviado com sucesso!");
+      router.push(`/feedback?name=${formData.name}`);
       reset();
       setCaptchaVerified(false);
     } catch (e) {
