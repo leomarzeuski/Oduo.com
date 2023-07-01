@@ -40,7 +40,7 @@ export default function ContactForm() {
     gtag_report_conversion();
     try {
       await sendMail(formData);
-      router.push(`/feedback?name=${formData.name}`);
+      router.push(`/cadastro?name=${formData.name}`);
       reset();
       setCaptchaVerified(false);
     } catch (e) {

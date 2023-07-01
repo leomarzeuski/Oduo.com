@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import queryString from "query-string";
 import Image from "next/image";
+import Link from "next/link";
+import { BsWhatsapp } from "react-icons/bs";
 
 function Feedback() {
   const router = useRouter();
@@ -19,6 +21,23 @@ function Feedback() {
         <title>ODuo - Obrigado por entrar em contato</title>
       </Head>
       <main className="flex flex-col">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '931404434872907');
+              fbq('track', 'PageView');
+              fbq('track', 'Lead');
+              `,
+          }}
+        />
         <div className="bg-[#043F8D] flex items-center justify-center w-full h-48">
           <Image
             src="/assets/img/logo-white.png"
@@ -90,10 +109,23 @@ function Feedback() {
           <h1 className="text-[#043F8D] capitalize font-extrabold text-3xl text-center">
             Obrigado, {name}
           </h1>
-          <span className="block mt-4 text-center max-w-[600px] text-gray">
+          <span className="block mt-4 text-center max-w-[600px] text-black">
             Obrigado por nos contatar! Em breve, nossa equipe entrará em contato
             para ajudá-lo e oferecer as melhores soluções para a sua empresa.
           </span>
+          <div className="mt-2">
+            <span className="text-sm text-gray">
+              Obtenha assistência instantânea: Entre em contato via WhatsApp!
+            </span>
+          </div>
+          <Link
+            className="flex gap-2 items-center rounded-full bg-[#25D366] text-white px-4 py-3 mt-4"
+            href="https://api.whatsapp.com/send?phone=5519992191070&text"
+            target="__blank"
+          >
+            <BsWhatsapp size={24} />
+            <span className="font-bold">Entrar em contato</span>
+          </Link>
         </div>
       </main>
     </>
