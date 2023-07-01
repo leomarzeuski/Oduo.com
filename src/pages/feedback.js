@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import queryString from "query-string";
@@ -20,8 +19,13 @@ function Feedback() {
         <title>ODuo - Obrigado por entrar em contato</title>
       </Head>
       <main className="flex flex-col">
-        <div className="bg-primary flex items-center justify-center w-full h-48">
-          <Image src="/assets/img/logo-white.png" width={150} height={100} />
+        <div className="bg-[#043F8D] flex items-center justify-center w-full h-48">
+          <Image
+            src="/assets/img/logo-white.png"
+            width={150}
+            height={100}
+            alt="Logo"
+          />
         </div>
         <div className="flex flex-col items-center py-12 px-6">
           <svg
@@ -35,7 +39,7 @@ function Feedback() {
             <path
               d="M876.03027,689.45c-.98047,1.37-1.97021,2.73-2.95019,4.08A16.82838,16.82838,0,0,1,863.5,696.5h-527a16.90383,16.90383,0,0,1-9.21-2.72c-.91016-1.2-1.81006-2.41-2.72022-3.62006l.91016-.5L592.27,541.78a16.01919,16.01919,0,0,1,15.47021-.02L875.12988,688.95Z"
               transform="translate(-319.5 -203.5)"
-              fill="#0762d9"
+              fill="#043F8D"
             />
             <path
               d="M863.5,378.5,632.28169,244.96964a64.023,64.023,0,0,0-63.98147-.03153L336.5,378.5a17.0241,17.0241,0,0,0-17,17v284a17.01984,17.01984,0,0,0,17,17h527a17.02879,17.02879,0,0,0,17-17v-284A17.02408,17.02408,0,0,0,863.5,378.5Zm15,301a15.03649,15.03649,0,0,1-15,15h-527a15.02706,15.02706,0,0,1-15-15v-284a15.01828,15.01828,0,0,1,15-15L568.30022,246.93811a64.023,64.023,0,0,1,63.98147.03153L863.5,380.5a15.01828,15.01828,0,0,1,15,15Z"
@@ -60,7 +64,7 @@ function Feedback() {
             <path
               d="M483.5748,269.5h-28a8,8,0,0,1,0-16h28a8,8,0,0,1,0,16Z"
               transform="translate(-319.5 -203.5)"
-              fill="#0762d9"
+              fill="#043F8D"
             />
             <path
               d="M516.5748,296.5h-61a8,8,0,0,1,0-16h61a8,8,0,0,1,0,16Z"
@@ -70,7 +74,7 @@ function Feedback() {
             <path
               d="M687,368.5H514a8,8,0,0,1,0-16H687a8,8,0,0,1,0,16Z"
               transform="translate(-319.5 -203.5)"
-              fill="#0762d9"
+              fill="#043F8D"
             />
             <path
               d="M703,399.5H497a8,8,0,0,1,0-16H703a8,8,0,0,1,0,16Z"
@@ -83,12 +87,12 @@ function Feedback() {
               fill="#e6e6e6"
             />
           </svg>
-          <h1 className="text-primary capitalize font-extrabold text-3xl text-center">
+          <h1 className="text-[#043F8D] capitalize font-extrabold text-3xl text-center">
             Obrigado, {name}
           </h1>
           <span className="block mt-4 text-center max-w-[600px] text-gray">
             Obrigado por nos contatar! Em breve, nossa equipe entrará em contato
-            para ajudá-lo e oferecer as melhores soluções para o seu projeto.
+            para ajudá-lo e oferecer as melhores soluções para a sua empresa.
           </span>
         </div>
       </main>
