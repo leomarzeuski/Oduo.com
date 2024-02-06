@@ -16,7 +16,7 @@ export default function Button({
   return (
     <button
       type="button"
-      className={`outline-none p-2 2xl:p-3 flex items-center justify-center font-semibold rounded-sm transition-all ease delay-50 ${variantClasses} ${className}`}
+      className={`outline-none rounded-lg p-2 2xl:p-3 flex items-center justify-center font-semibold transition-all ease delay-50 ${variantClasses} ${className}`}
       {...rest}
     >
       {children}

@@ -6,7 +6,7 @@ import Button from "@/components/button";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden lg:h-[90vh] pt-14 xl:pt-20 2xl:pt-24 pb-12 bg-secondary">
+    <section className="relative overflow-hidden lg:h-[100vh] pt-24 xl:pt-20 2xl:pt-24 pb-12 bg-secondary">
       <div className="h-full container flex flex-col lg:flex-row items-center justify-between md:gap-10">
         <div
           className="z-20 w-full lg:max-w-[500px] mb-12 md:mb-0"

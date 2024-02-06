@@ -51,7 +51,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full lg:max-w-[500px] h-full p-3 flex flex-col justify-between bg-secondary rounded-sm border border-white"
+      className="w-full lg:max-w-[500px] h-full p-6 flex flex-col justify-between bg-white rounded-lg shadow-lg"
     >
       <fieldset>
         <Input
@@ -131,16 +131,12 @@ export default function ContactForm() {
           <option value="+100">Mais de 100 funcionários</option>
         </Select>
       </fieldset>
-      <ReCAPTCHA
-        className="mx-auto mt-4"
-        sitekey={SITE_KEY}
-        onChange={() => setCaptchaVerified(true)}
-      />
+
       <Button
         type="submit"
         variant="filled"
-        className="w-full mt-3 disabled:opacity-60 disabled:cursor-not-allowed"
-        disabled={isSubmitting}
+        className="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition duration-300 ease-in-out"
+        disabled={isSubmitting || !captchaVerified}
       >
         {isSubmitting ? "Enviando..." : "Enviar"}
       </Button>

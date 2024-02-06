@@ -34,7 +34,7 @@ export default function Header() {
   const toggleMenu = () => setMenuIsOpen((prevState) => !prevState);
 
   return (
-    <header className="h-20 bg-white">
+    <header className="fixed top-0 left-0 right-0 z-50 h-20 bg-white">
       <div className="h-full container flex items-center justify-between">
         <Link href="/">
           <Logo />
@@ -53,9 +53,8 @@ export default function Header() {
             <List size={28} className="text-primary" />
           </button>
           <div
-            className={`${
-              menuIsOpen ? "block" : "hidden"
-            } md:hidden absolute z-30 inset-0 bg-black bg-opacity-50`}
+            className={`${menuIsOpen ? "block" : "hidden"
+              } md:hidden absolute z-30 inset-0 bg-black bg-opacity-50`}
           />
           {menuIsOpen && (
             <ul

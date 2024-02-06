@@ -15,9 +15,8 @@ const InputBase = (
         ref={ref}
         type="text"
         name={name}
-        className={`w-full p-2 border-2 border-[#DDD] focus:border-primary outline-none rounded-sm ${
-          !!error ? "border-red" : ""
-        }`}
+        className={`w-full p-2 border-2 rounded-xl border-[#DDD] focus:border-primary outline-none rounded-sm ${!!error ? "border-red" : ""
+          }`}
         autoComplete="off"
         {...rest}
       />

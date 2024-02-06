@@ -14,7 +14,7 @@ const SelectBase = (
       <select
         ref={ref}
         name={name}
-        className="w-full p-2 border-2 bg-white border-[#DDD] focus:border-primary outline-none rounded-sm"
+        className="w-full p-2 border-2 rounded-xl bg-white border-[#DDD] focus:border-primary outline-none rounded-sm"
         {...rest}
       >
         {children}
